@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Request</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/67/3c/0a/673c0ae03a40cab4add585f5ad30f3ec.jpg');
+            background-size: cover;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #4a4e69;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 430px;
+            height: 430px;
+            margin: 100px auto;
+        }
+
+        .envelope {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.hamleys.com/media/catalog/product/6/2/628990_main_jnyrqecfon7bbmh7.jpg');
+            background-size: cover;
+            position: absolute;
+            border: 2px solid #dfc2a2;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 3px 10px 10px rgba(0, 0, 0, 1);
+            transition: transform 0.3s ease;
+        }
+
+        .envelope:hover {
+            transform: scale(1.1);
+        }
+
+        .letter {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #fffdf9;
+            position: absolute;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #c8b8db;
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Harry P', serif;
+            font-size: 1.2em;
+            color: #4a4e69;
+            transition: all 0.3s ease;
+        }
+
+        @font-face {
+            font-family: 'Harry P';
+            src: url('https://fonts.cdnfonts.com/s/12018/Harry-Potter.ttf') format('truetype');
+        }
+
+        .letter button {
+            background-color: #b5a1e5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .letter button:hover {
+            background-color: #9a82cc;
+        }
+
+        .letter p {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .container:hover .letter {
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope" id="envelope" onclick="showLetter()"></div>
+        <div class="letter" id="letter">
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">Dear <b><i>Varun</i></b></p><br>
+
+                “It is our choices, Harry, that show what we truly are, far more than our abilities.” – Albus Dumbledore<br><br>
+                And today, I’m choosing to ask you for a small piece of magic—a gift! Whether it’s  a chocolate frog, or even a note enchanted with your kind words, or it can be the kinderjoy gift it would mean the world to me.<br>
+                
+                Should you decide to charm my day, rest assured your generosity will be met with gratitude greater than a Gringotts vault filled with Galleons.<br><br>
+                
+                With the warmth of a Phoenix feather,<br>
+                <b><i>AKSH</i></b></p>
+        </div>
+    </div>
+
+    <script>
+        function showLetter() {
+            document.getElementById('envelope').style.display = 'none';
+            document.getElementById('letter').style.display = 'block';
+        }
+
+        function acceptDate() {
+            alert('Owl sent! Your magical date is confirmed. 🦉✨');
+        }
+    </script>
+</body>
+</html>
